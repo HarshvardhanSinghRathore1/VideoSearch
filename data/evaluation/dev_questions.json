@@ -1,0 +1,26 @@
+{
+  "dataset_name": "VideoRAG_Phase1_Dev_Dataset",
+  "version": "1.0",
+  "video_source": "sample.mp4",
+  "description": "Quick development and sanity check questions for rapid pipeline iteration.",
+  "questions": [
+    {
+      "id": "dev_001",
+      "question": "What is normalization?",
+      "expected_answer": "Normalization is the process of organizing data in a database to reduce redundancy.",
+      "start_time": 0.0,
+      "end_time": 45.0,
+      "answerable": true,
+      "type": "definition"
+    },
+    {
+      "id": "dev_002",
+      "question": "What is the capital of Mars?",
+      "expected_answer": null,
+      "start_time": null,
+      "end_time": null,
+      "answerable": false,
+      "type": "unanswerable_out_of_domain"
+    }
+  ]
+}

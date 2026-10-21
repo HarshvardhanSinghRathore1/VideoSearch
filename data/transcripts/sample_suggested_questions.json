@@ -1,0 +1,8 @@
+[
+  "What is the primary goal of database normalization and what anomalies does it eliminate?",
+  "What conditions must a relation meet to satisfy First Normal Form (1NF)?",
+  "How does Second Normal Form (2NF) eliminate partial dependencies in a table?",
+  "What defines a transitive dependency in Third Normal Form (3NF), and how does 3NF resolve it?",
+  "What condition must be met by every non-trivial functional dependency X determines Y in Boyce-Codd Normal Form (BCNF)?",
+  "What is the main engineering trade-off associated with high database normalization?"
+]

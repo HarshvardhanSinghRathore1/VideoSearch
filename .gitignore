@@ -1,0 +1,122 @@
+# ==============================================================================
+# Git Ignore for Video RAG / VideoSearch Project
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Environment Variables & Secrets (CRITICAL FOR GITHUB PUSH PROTECTION)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+*.env
+!.env.example
+frontend/.env
+frontend/.env.*
+frontend/*.env
+!frontend/.env.example
+
+# ------------------------------------------------------------------------------
+# 2. Node & Frontend
+# ------------------------------------------------------------------------------
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ------------------------------------------------------------------------------
+# 3. Python & Virtual Environments
+# ------------------------------------------------------------------------------
+__pycache__/
+*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# ------------------------------------------------------------------------------
+# 4. Jupyter Notebooks
+# ------------------------------------------------------------------------------
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# ------------------------------------------------------------------------------
+# 5. Data, Media & Vector Store Storage (Large Binaries & Uploaded Artifacts)
+# ------------------------------------------------------------------------------
+# Audio files
+data/audio/*
+!data/audio/.gitkeep
+!data/audio/sample.wav
+
+# Video files (heavy binaries: mp4, mkv, webm, etc.)
+data/videos/*
+!data/videos/.gitkeep
+!data/videos/sample.mp4
+
+# FAISS Vector Store indexes & generated metadata
+data/vector_store/*.index
+data/vector_store/*_metadata.json
+!data/vector_store/.gitkeep
+!data/vector_store/chunks_metadata.json
+!data/vector_store/faiss.index
+
+# Uploaded/Generated transcripts (keep sample fixtures)
+data/transcripts/*videoplayback*
+data/transcripts/*_suggested_questions.json
+!data/transcripts/sample_suggested_questions.json
+
+# ------------------------------------------------------------------------------
+# 6. IDE, Editors & OS Files
+# ------------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log

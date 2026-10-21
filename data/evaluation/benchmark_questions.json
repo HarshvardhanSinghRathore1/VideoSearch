@@ -1,0 +1,99 @@
+{
+  "dataset_name": "VideoRAG_Phase1_Evaluation_Benchmark",
+  "version": "1.0",
+  "video_source": "sample.mp4",
+  "topic": "Database Normalization and Data Mining Principles",
+  "description": "Formally annotated evaluation benchmark for Phase 1 Transcript RAG testing. Contains 10 questions with ground-truth timestamp bounds and negative test cases.",
+  "questions": [
+    {
+      "id": "q001",
+      "question": "What is the primary goal of database normalization?",
+      "expected_answer": "Database normalization is the process of organizing structured data in a relational database to reduce data redundancy and eliminate anomalies such as insertion, update, and deletion anomalies.",
+      "start_time": 0.0,
+      "end_time": 45.0,
+      "answerable": true,
+      "type": "definition"
+    },
+    {
+      "id": "q002",
+      "question": "What is required for a table to satisfy First Normal Form (1NF)?",
+      "expected_answer": "A table satisfies First Normal Form when all column values are atomic, meaning each cell contains only a single value with no repeating groups or arrays.",
+      "start_time": 45.0,
+      "end_time": 85.0,
+      "answerable": true,
+      "type": "concept"
+    },
+    {
+      "id": "q003",
+      "question": "How does Second Normal Form (2NF) eliminate partial functional dependencies?",
+      "expected_answer": "Second Normal Form requires the table to be in 1NF and ensures every non-prime attribute is fully functionally dependent on the entire primary key, eliminating partial dependencies.",
+      "start_time": 85.0,
+      "end_time": 130.0,
+      "answerable": true,
+      "type": "explanation"
+    },
+    {
+      "id": "q004",
+      "question": "What is transitive dependency and how is it resolved in Third Normal Form (3NF)?",
+      "expected_answer": "Transitive dependency occurs when a non-key attribute determines another non-key attribute (X -> Y and Y -> Z). Third Normal Form resolves this by moving the transitively dependent attributes to a separate relation.",
+      "start_time": 130.0,
+      "end_time": 175.0,
+      "answerable": true,
+      "type": "explanation"
+    },
+    {
+      "id": "q005",
+      "question": "How is Boyce-Codd Normal Form (BCNF) stricter than 3NF?",
+      "expected_answer": "BCNF requires that for every non-trivial functional dependency X -> Y, X must strictly be a superkey of the relation.",
+      "start_time": 175.0,
+      "end_time": 215.0,
+      "answerable": true,
+      "type": "comparison"
+    },
+    {
+      "id": "q006",
+      "question": "What are the common data preprocessing steps mentioned for data mining?",
+      "expected_answer": "Data preprocessing involves data cleaning to handle missing values and noisy data, data integration, data transformation including normalization, and data reduction.",
+      "start_time": 215.0,
+      "end_time": 260.0,
+      "answerable": true,
+      "type": "list"
+    },
+    {
+      "id": "q007",
+      "question": "What is the purpose of K-Means clustering algorithm?",
+      "expected_answer": "K-Means is an unsupervised partition-based clustering algorithm that groups unlabeled data points into K clusters based on distance metrics to minimize within-cluster variance.",
+      "start_time": 260.0,
+      "end_time": 305.0,
+      "answerable": true,
+      "type": "definition"
+    },
+    {
+      "id": "q008",
+      "question": "What are the key trade-offs between excessive normalization and query performance?",
+      "expected_answer": "Excessive normalization reduces update anomalies and data duplication but requires frequent multi-table JOIN operations, which can degrade read query performance in large-scale systems.",
+      "start_time": 305.0,
+      "end_time": 345.0,
+      "answerable": true,
+      "type": "tradeoff"
+    },
+    {
+      "id": "q009",
+      "question": "What is the capital city of France?",
+      "expected_answer": null,
+      "start_time": null,
+      "end_time": null,
+      "answerable": false,
+      "type": "unanswerable_out_of_domain"
+    },
+    {
+      "id": "q010",
+      "question": "How does quantum key distribution work in optical fiber networks?",
+      "expected_answer": null,
+      "start_time": null,
+      "end_time": null,
+      "answerable": false,
+      "type": "unanswerable_out_of_domain"
+    }
+  ]
+}

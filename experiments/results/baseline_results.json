@@ -1,0 +1,621 @@
+{
+  "experiment_id": "phase1_baseline_1789923272",
+  "timestamp": "2026-09-20 22:24:32",
+  "configuration": {
+    "video_identifier": "sample.mp4",
+    "transcription_model": "base",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "embedding_dimension": 384,
+    "chunk_size": 120,
+    "chunk_overlap": 25,
+    "top_k": 5,
+    "llm_model": "gemini-1.5-flash",
+    "eval_dataset_path": "data\\evaluation\\benchmark_questions.json",
+    "eval_dataset_version": "1.0"
+  },
+  "counts": {
+    "total_queries": 10,
+    "answerable_queries": 8,
+    "unanswerable_queries": 2
+  },
+  "retrieval_metrics": {
+    "Recall@1": 1.0,
+    "Recall@3": 1.0,
+    "Recall@5": 1.0,
+    "MRR": 1.0
+  },
+  "temporal_grounding_metrics": {
+    "Mean_Top1_IoU": 1.0,
+    "Top1_Temporal_Hit_Rate": 1.0
+  },
+  "answer_metrics": {
+    "Abstention_Accuracy": 1.0
+  },
+  "latency_metrics_sec": {
+    "Avg_Retrieval_Latency": 0.016,
+    "Avg_Generation_Latency": 0.0,
+    "Avg_Total_Latency": 0.016
+  },
+  "samples": [
+    {
+      "sample_id": "q001",
+      "question": "What is the primary goal of database normalization?",
+      "expected_answer": "Database normalization is the process of organizing structured data in a relational database to reduce data redundancy and eliminate anomalies such as insertion, update, and deletion anomalies.",
+      "question_type": "definition",
+      "answerable": true,
+      "gt_start_time": 0.0,
+      "gt_end_time": 45.0,
+      "retrieved_chunk_ids": [
+        "chunk_001",
+        "chunk_008",
+        "chunk_006",
+        "chunk_002",
+        "chunk_003"
+      ],
+      "retrieved_scores": [
+        0.871,
+        0.7538,
+        0.711,
+        0.6791,
+        0.6671
+      ],
+      "retrieved_time_spans": [
+        {
+          "start": 0.0,
+          "end": 45.0
+        },
+        {
+          "start": 305.0,
+          "end": 345.0
+        },
+        {
+          "start": 215.0,
+          "end": 260.0
+        },
+        {
+          "start": 45.0,
+          "end": 85.0
+        },
+        {
+          "start": 85.0,
+          "end": 130.0
+        }
+      ],
+      "generated_answer": "According to the video transcript: Welcome to this lecture on database design. Database normalization is the systematic process of organizing structured data in a relational database. The primary goal is to minimize data redundancy and eliminate anomalies such as insertion, update, and deletion anomalies. By decomposing large tables into smaller, well-structured relations, we maintain high data integrity.",
+      "generated_evidence_raw": "[00:00:00.00 - 00:00:45.00]",
+      "top1_temporal_iou": 1.0,
+      "top1_temporal_hit": true,
+      "any_k_temporal_hit": true,
+      "retrieval_hit_at_1": true,
+      "retrieval_hit_at_3": true,
+      "retrieval_hit_at_5": true,
+      "reciprocal_rank": 1.0,
+      "abstention_correct": null,
+      "retrieval_latency_sec": 0.013,
+      "generation_latency_sec": 0.0,
+      "total_latency_sec": 0.013
+    },
+    {
+      "sample_id": "q002",
+      "question": "What is required for a table to satisfy First Normal Form (1NF)?",
+      "expected_answer": "A table satisfies First Normal Form when all column values are atomic, meaning each cell contains only a single value with no repeating groups or arrays.",
+      "question_type": "concept",
+      "answerable": true,
+      "gt_start_time": 45.0,
+      "gt_end_time": 85.0,
+      "retrieved_chunk_ids": [
+        "chunk_002",
+        "chunk_003",
+        "chunk_005",
+        "chunk_004",
+        "chunk_008"
+      ],
+      "retrieved_scores": [
+        0.8629,
+        0.8292,
+        0.7638,
+        0.7428,
+        0.6729
+      ],
+      "retrieved_time_spans": [
+        {
+          "start": 45.0,
+          "end": 85.0
+        },
+        {
+          "start": 85.0,
+          "end": 130.0
+        },
+        {
+          "start": 175.0,
+          "end": 215.0
+        },
+        {
+          "start": 130.0,
+          "end": 175.0
+        },
+        {
+          "start": 305.0,
+          "end": 345.0
+        }
+      ],
+      "generated_answer": "According to the video transcript: Let us examine First Normal Form, or 1NF. A relation satisfies First Normal Form if and only if all column values are atomic. This means every cell contains a single discrete value rather than sets, arrays, or repeating groups. Every row must also be uniquely identifiable through a primary key.",
+      "generated_evidence_raw": "[00:00:45.00 - 00:01:25.00]",
+      "top1_temporal_iou": 1.0,
+      "top1_temporal_hit": true,
+      "any_k_temporal_hit": true,
+      "retrieval_hit_at_1": true,
+      "retrieval_hit_at_3": true,
+      "retrieval_hit_at_5": true,
+      "reciprocal_rank": 1.0,
+      "abstention_correct": null,
+      "retrieval_latency_sec": 0.014,
+      "generation_latency_sec": 0.0,
+      "total_latency_sec": 0.014
+    },
+    {
+      "sample_id": "q003",
+      "question": "How does Second Normal Form (2NF) eliminate partial functional dependencies?",
+      "expected_answer": "Second Normal Form requires the table to be in 1NF and ensures every non-prime attribute is fully functionally dependent on the entire primary key, eliminating partial dependencies.",
+      "question_type": "explanation",
+      "answerable": true,
+      "gt_start_time": 85.0,
+      "gt_end_time": 130.0,
+      "retrieved_chunk_ids": [
+        "chunk_003",
+        "chunk_004",
+        "chunk_005",
+        "chunk_002",
+        "chunk_008"
+      ],
+      "retrieved_scores": [
+        0.8251,
+        0.7754,
+        0.7393,
+        0.7128,
+        0.6667
+      ],
+      "retrieved_time_spans": [
+        {
+          "start": 85.0,
+          "end": 130.0
+        },
+        {
+          "start": 130.0,
+          "end": 175.0
+        },
+        {
+          "start": 175.0,
+          "end": 215.0
+        },
+        {
+          "start": 45.0,
+          "end": 85.0
+        },
+        {
+          "start": 305.0,
+          "end": 345.0
+        }
+      ],
+      "generated_answer": "According to the video transcript: Moving to Second Normal Form, or 2NF. To achieve 2NF, a table must first be in 1NF, and secondly, all non-prime attributes must be fully functionally dependent on the primary key. This eliminates partial dependencies where an attribute depends on only a portion of a composite primary key.",
+      "generated_evidence_raw": "[00:01:25.00 - 00:02:10.00]",
+      "top1_temporal_iou": 1.0,
+      "top1_temporal_hit": true,
+      "any_k_temporal_hit": true,
+      "retrieval_hit_at_1": true,
+      "retrieval_hit_at_3": true,
+      "retrieval_hit_at_5": true,
+      "reciprocal_rank": 1.0,
+      "abstention_correct": null,
+      "retrieval_latency_sec": 0.014,
+      "generation_latency_sec": 0.0,
+      "total_latency_sec": 0.014
+    },
+    {
+      "sample_id": "q004",
+      "question": "What is transitive dependency and how is it resolved in Third Normal Form (3NF)?",
+      "expected_answer": "Transitive dependency occurs when a non-key attribute determines another non-key attribute (X -> Y and Y -> Z). Third Normal Form resolves this by moving the transitively dependent attributes to a separate relation.",
+      "question_type": "explanation",
+      "answerable": true,
+      "gt_start_time": 130.0,
+      "gt_end_time": 175.0,
+      "retrieved_chunk_ids": [
+        "chunk_004",
+        "chunk_005",
+        "chunk_003",
+        "chunk_002",
+        "chunk_001"
+      ],
+      "retrieved_scores": [
+        0.8699,
+        0.7408,
+        0.6698,
+        0.6539,
+        0.5766
+      ],
+      "retrieved_time_spans": [
+        {
+          "start": 130.0,
+          "end": 175.0
+        },
+        {
+          "start": 175.0,
+          "end": 215.0
+        },
+        {
+          "start": 85.0,
+          "end": 130.0
+        },
+        {
+          "start": 45.0,
+          "end": 85.0
+        },
+        {
+          "start": 0.0,
+          "end": 45.0
+        }
+      ],
+      "generated_answer": "According to the video transcript: Next is Third Normal Form, or 3NF. A table is in 3NF if it satisfies 2NF and has no transitive functional dependencies. A transitive dependency occurs when non-key attribute A determines non-key attribute B, which in turn determines non-key attribute C. 3NF resolves this by decomposing the attributes into separate tables.",
+      "generated_evidence_raw": "[00:02:10.00 - 00:02:55.00]",
+      "top1_temporal_iou": 1.0,
+      "top1_temporal_hit": true,
+      "any_k_temporal_hit": true,
+      "retrieval_hit_at_1": true,
+      "retrieval_hit_at_3": true,
+      "retrieval_hit_at_5": true,
+      "reciprocal_rank": 1.0,
+      "abstention_correct": null,
+      "retrieval_latency_sec": 0.014,
+      "generation_latency_sec": 0.0,
+      "total_latency_sec": 0.014
+    },
+    {
+      "sample_id": "q005",
+      "question": "How is Boyce-Codd Normal Form (BCNF) stricter than 3NF?",
+      "expected_answer": "BCNF requires that for every non-trivial functional dependency X -> Y, X must strictly be a superkey of the relation.",
+      "question_type": "comparison",
+      "answerable": true,
+      "gt_start_time": 175.0,
+      "gt_end_time": 215.0,
+      "retrieved_chunk_ids": [
+        "chunk_005",
+        "chunk_004",
+        "chunk_003",
+        "chunk_002",
+        "chunk_008"
+      ],
+      "retrieved_scores": [
+        0.8946,
+        0.6993,
+        0.6639,
+        0.651,
+        0.5891
+      ],
+      "retrieved_time_spans": [
+        {
+          "start": 175.0,
+          "end": 215.0
+        },
+        {
+          "start": 130.0,
+          "end": 175.0
+        },
+        {
+          "start": 85.0,
+          "end": 130.0
+        },
+        {
+          "start": 45.0,
+          "end": 85.0
+        },
+        {
+          "start": 305.0,
+          "end": 345.0
+        }
+      ],
+      "generated_answer": "According to the video transcript: Boyce-Codd Normal Form, or BCNF, is a stricter extension of 3NF. In BCNF, for every non-trivial functional dependency X determines Y, X must strictly be a candidate superkey of the relation. This removes anomalies that standard 3NF may still permit when multiple candidate keys overlap.",
+      "generated_evidence_raw": "[00:02:55.00 - 00:03:35.00]",
+      "top1_temporal_iou": 1.0,
+      "top1_temporal_hit": true,
+      "any_k_temporal_hit": true,
+      "retrieval_hit_at_1": true,
+      "retrieval_hit_at_3": true,
+      "retrieval_hit_at_5": true,
+      "reciprocal_rank": 1.0,
+      "abstention_correct": null,
+      "retrieval_latency_sec": 0.014,
+      "generation_latency_sec": 0.0,
+      "total_latency_sec": 0.014
+    },
+    {
+      "sample_id": "q006",
+      "question": "What are the common data preprocessing steps mentioned for data mining?",
+      "expected_answer": "Data preprocessing involves data cleaning to handle missing values and noisy data, data integration, data transformation including normalization, and data reduction.",
+      "question_type": "list",
+      "answerable": true,
+      "gt_start_time": 215.0,
+      "gt_end_time": 260.0,
+      "retrieved_chunk_ids": [
+        "chunk_006",
+        "chunk_007",
+        "chunk_001",
+        "chunk_008",
+        "chunk_002"
+      ],
+      "retrieved_scores": [
+        0.866,
+        0.7066,
+        0.6278,
+        0.6085,
+        0.5225
+      ],
+      "retrieved_time_spans": [
+        {
+          "start": 215.0,
+          "end": 260.0
+        },
+        {
+          "start": 260.0,
+          "end": 305.0
+        },
+        {
+          "start": 0.0,
+          "end": 45.0
+        },
+        {
+          "start": 305.0,
+          "end": 345.0
+        },
+        {
+          "start": 45.0,
+          "end": 85.0
+        }
+      ],
+      "generated_answer": "According to the video transcript: Now turning to data mining principles. Before applying analytical models, data preprocessing is essential. Major preprocessing stages include data cleaning to handle missing values and noisy data, data integration from multiple sources, data transformation including numerical normalization and scaling, and data reduction.",
+      "generated_evidence_raw": "[00:03:35.00 - 00:04:20.00]",
+      "top1_temporal_iou": 1.0,
+      "top1_temporal_hit": true,
+      "any_k_temporal_hit": true,
+      "retrieval_hit_at_1": true,
+      "retrieval_hit_at_3": true,
+      "retrieval_hit_at_5": true,
+      "reciprocal_rank": 1.0,
+      "abstention_correct": null,
+      "retrieval_latency_sec": 0.013,
+      "generation_latency_sec": 0.0,
+      "total_latency_sec": 0.013
+    },
+    {
+      "sample_id": "q007",
+      "question": "What is the purpose of K-Means clustering algorithm?",
+      "expected_answer": "K-Means is an unsupervised partition-based clustering algorithm that groups unlabeled data points into K clusters based on distance metrics to minimize within-cluster variance.",
+      "question_type": "definition",
+      "answerable": true,
+      "gt_start_time": 260.0,
+      "gt_end_time": 305.0,
+      "retrieved_chunk_ids": [
+        "chunk_007",
+        "chunk_006",
+        "chunk_001",
+        "chunk_008",
+        "chunk_002"
+      ],
+      "retrieved_scores": [
+        0.8169,
+        0.6399,
+        0.5969,
+        0.5913,
+        0.4947
+      ],
+      "retrieved_time_spans": [
+        {
+          "start": 260.0,
+          "end": 305.0
+        },
+        {
+          "start": 215.0,
+          "end": 260.0
+        },
+        {
+          "start": 0.0,
+          "end": 45.0
+        },
+        {
+          "start": 305.0,
+          "end": 345.0
+        },
+        {
+          "start": 45.0,
+          "end": 85.0
+        }
+      ],
+      "generated_answer": "According to the video transcript: In unsupervised data mining, clustering groups unlabeled observations into homogeneous subsets. The K-Means algorithm partitions data into K predefined clusters by iteratively minimizing the sum of squared Euclidean distances between points and their corresponding cluster centroids.",
+      "generated_evidence_raw": "[00:04:20.00 - 00:05:05.00]",
+      "top1_temporal_iou": 1.0,
+      "top1_temporal_hit": true,
+      "any_k_temporal_hit": true,
+      "retrieval_hit_at_1": true,
+      "retrieval_hit_at_3": true,
+      "retrieval_hit_at_5": true,
+      "reciprocal_rank": 1.0,
+      "abstention_correct": null,
+      "retrieval_latency_sec": 0.012,
+      "generation_latency_sec": 0.0,
+      "total_latency_sec": 0.012
+    },
+    {
+      "sample_id": "q008",
+      "question": "What are the key trade-offs between excessive normalization and query performance?",
+      "expected_answer": "Excessive normalization reduces update anomalies and data duplication but requires frequent multi-table JOIN operations, which can degrade read query performance in large-scale systems.",
+      "question_type": "tradeoff",
+      "answerable": true,
+      "gt_start_time": 305.0,
+      "gt_end_time": 345.0,
+      "retrieved_chunk_ids": [
+        "chunk_008",
+        "chunk_001",
+        "chunk_006",
+        "chunk_002",
+        "chunk_003"
+      ],
+      "retrieved_scores": [
+        0.8174,
+        0.7283,
+        0.6529,
+        0.5863,
+        0.5719
+      ],
+      "retrieved_time_spans": [
+        {
+          "start": 305.0,
+          "end": 345.0
+        },
+        {
+          "start": 0.0,
+          "end": 45.0
+        },
+        {
+          "start": 215.0,
+          "end": 260.0
+        },
+        {
+          "start": 45.0,
+          "end": 85.0
+        },
+        {
+          "start": 85.0,
+          "end": 130.0
+        }
+      ],
+      "generated_answer": "According to the video transcript: Finally, we consider engineering trade-offs. While high normalization prevents insertion and update anomalies, it often requires frequent multi-table JOIN operations. In high-throughput analytical workloads, controlled denormalization is often applied to boost read query throughput.",
+      "generated_evidence_raw": "[00:05:05.00 - 00:05:45.00]",
+      "top1_temporal_iou": 1.0,
+      "top1_temporal_hit": true,
+      "any_k_temporal_hit": true,
+      "retrieval_hit_at_1": true,
+      "retrieval_hit_at_3": true,
+      "retrieval_hit_at_5": true,
+      "reciprocal_rank": 1.0,
+      "abstention_correct": null,
+      "retrieval_latency_sec": 0.014,
+      "generation_latency_sec": 0.0,
+      "total_latency_sec": 0.014
+    },
+    {
+      "sample_id": "q009",
+      "question": "What is the capital city of France?",
+      "expected_answer": null,
+      "question_type": "unanswerable_out_of_domain",
+      "answerable": false,
+      "gt_start_time": null,
+      "gt_end_time": null,
+      "retrieved_chunk_ids": [
+        "chunk_005",
+        "chunk_004",
+        "chunk_003",
+        "chunk_002",
+        "chunk_008"
+      ],
+      "retrieved_scores": [
+        0.4608,
+        0.3648,
+        0.36,
+        0.3452,
+        0.3087
+      ],
+      "retrieved_time_spans": [
+        {
+          "start": 175.0,
+          "end": 215.0
+        },
+        {
+          "start": 130.0,
+          "end": 175.0
+        },
+        {
+          "start": 85.0,
+          "end": 130.0
+        },
+        {
+          "start": 45.0,
+          "end": 85.0
+        },
+        {
+          "start": 305.0,
+          "end": 345.0
+        }
+      ],
+      "generated_answer": "The provided video transcript does not contain information to answer this question.",
+      "generated_evidence_raw": "None",
+      "top1_temporal_iou": null,
+      "top1_temporal_hit": null,
+      "any_k_temporal_hit": null,
+      "retrieval_hit_at_1": null,
+      "retrieval_hit_at_3": null,
+      "retrieval_hit_at_5": null,
+      "reciprocal_rank": null,
+      "abstention_correct": true,
+      "retrieval_latency_sec": 0.03,
+      "generation_latency_sec": 0.0,
+      "total_latency_sec": 0.03
+    },
+    {
+      "sample_id": "q010",
+      "question": "How does quantum key distribution work in optical fiber networks?",
+      "expected_answer": null,
+      "question_type": "unanswerable_out_of_domain",
+      "answerable": false,
+      "gt_start_time": null,
+      "gt_end_time": null,
+      "retrieved_chunk_ids": [
+        "chunk_003",
+        "chunk_002",
+        "chunk_005",
+        "chunk_008",
+        "chunk_004"
+      ],
+      "retrieved_scores": [
+        0.5423,
+        0.5161,
+        0.4993,
+        0.4965,
+        0.4759
+      ],
+      "retrieved_time_spans": [
+        {
+          "start": 85.0,
+          "end": 130.0
+        },
+        {
+          "start": 45.0,
+          "end": 85.0
+        },
+        {
+          "start": 175.0,
+          "end": 215.0
+        },
+        {
+          "start": 305.0,
+          "end": 345.0
+        },
+        {
+          "start": 130.0,
+          "end": 175.0
+        }
+      ],
+      "generated_answer": "The provided video transcript does not contain information to answer this question.",
+      "generated_evidence_raw": "None",
+      "top1_temporal_iou": null,
+      "top1_temporal_hit": null,
+      "any_k_temporal_hit": null,
+      "retrieval_hit_at_1": null,
+      "retrieval_hit_at_3": null,
+      "retrieval_hit_at_5": null,
+      "reciprocal_rank": null,
+      "abstention_correct": true,
+      "retrieval_latency_sec": 0.025,
+      "generation_latency_sec": 0.0,
+      "total_latency_sec": 0.025
+    }
+  ]
+}

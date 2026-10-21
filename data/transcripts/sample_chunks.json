@@ -1,0 +1,90 @@
+[
+  {
+    "chunk_id": "chunk_001",
+    "text": "Welcome to this lecture on database design. Database normalization is the systematic process of organizing structured data in a relational database. The primary goal is to minimize data redundancy and eliminate anomalies such as insertion, update, and deletion anomalies. By decomposing large tables into smaller, well-structured relations, we maintain high data integrity.",
+    "start_time": 0.0,
+    "end_time": 45.0,
+    "source_video": "sample.mp4",
+    "token_count_approx": 67,
+    "segment_indices": [
+      0
+    ]
+  },
+  {
+    "chunk_id": "chunk_002",
+    "text": "Let us examine First Normal Form, or 1NF. A relation satisfies First Normal Form if and only if all column values are atomic. This means every cell contains a single discrete value rather than sets, arrays, or repeating groups. Every row must also be uniquely identifiable through a primary key.",
+    "start_time": 45.0,
+    "end_time": 85.0,
+    "source_video": "sample.mp4",
+    "token_count_approx": 65,
+    "segment_indices": [
+      1
+    ]
+  },
+  {
+    "chunk_id": "chunk_003",
+    "text": "Moving to Second Normal Form, or 2NF. To achieve 2NF, a table must first be in 1NF, and secondly, all non-prime attributes must be fully functionally dependent on the primary key. This eliminates partial dependencies where an attribute depends on only a portion of a composite primary key.",
+    "start_time": 85.0,
+    "end_time": 130.0,
+    "source_video": "sample.mp4",
+    "token_count_approx": 62,
+    "segment_indices": [
+      2
+    ]
+  },
+  {
+    "chunk_id": "chunk_004",
+    "text": "Next is Third Normal Form, or 3NF. A table is in 3NF if it satisfies 2NF and has no transitive functional dependencies. A transitive dependency occurs when non-key attribute A determines non-key attribute B, which in turn determines non-key attribute C. 3NF resolves this by decomposing the attributes into separate tables.",
+    "start_time": 130.0,
+    "end_time": 175.0,
+    "source_video": "sample.mp4",
+    "token_count_approx": 66,
+    "segment_indices": [
+      3
+    ]
+  },
+  {
+    "chunk_id": "chunk_005",
+    "text": "Boyce-Codd Normal Form, or BCNF, is a stricter extension of 3NF. In BCNF, for every non-trivial functional dependency X determines Y, X must strictly be a candidate superkey of the relation. This removes anomalies that standard 3NF may still permit when multiple candidate keys overlap.",
+    "start_time": 175.0,
+    "end_time": 215.0,
+    "source_video": "sample.mp4",
+    "token_count_approx": 58,
+    "segment_indices": [
+      4
+    ]
+  },
+  {
+    "chunk_id": "chunk_006",
+    "text": "Now turning to data mining principles. Before applying analytical models, data preprocessing is essential. Major preprocessing stages include data cleaning to handle missing values and noisy data, data integration from multiple sources, data transformation including numerical normalization and scaling, and data reduction.",
+    "start_time": 215.0,
+    "end_time": 260.0,
+    "source_video": "sample.mp4",
+    "token_count_approx": 54,
+    "segment_indices": [
+      5
+    ]
+  },
+  {
+    "chunk_id": "chunk_007",
+    "text": "In unsupervised data mining, clustering groups unlabeled observations into homogeneous subsets. The K-Means algorithm partitions data into K predefined clusters by iteratively minimizing the sum of squared Euclidean distances between points and their corresponding cluster centroids.",
+    "start_time": 260.0,
+    "end_time": 305.0,
+    "source_video": "sample.mp4",
+    "token_count_approx": 46,
+    "segment_indices": [
+      6
+    ]
+  },
+  {
+    "chunk_id": "chunk_008",
+    "text": "Finally, we consider engineering trade-offs. While high normalization prevents insertion and update anomalies, it often requires frequent multi-table JOIN operations. In high-throughput analytical workloads, controlled denormalization is often applied to boost read query throughput.",
+    "start_time": 305.0,
+    "end_time": 345.0,
+    "source_video": "sample.mp4",
+    "token_count_approx": 44,
+    "segment_indices": [
+      7
+    ]
+  }
+]
